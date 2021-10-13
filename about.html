@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	#menu{
+		width: 980px;
+		background: black;
+		min-height: 40px;
+		margin: 0 auto;
+	}
+		ul#menu{
+			padding: 0;
+
+
+		}
+        ul#menu li{
+        	list-style: none;
+            float: left;
+            border-right: 2px solid #605B5B;
+            border-left: 2px solid #605B05;
+            border-bottom: 5px solid orange;
+            position: relative;
+        }
+        #menu li:last-child{
+        	border-right: none;
+        }
+        #menu li a{
+        	color: red;
+        	text-decoration: none;
+        	background: black;
+        	padding: 10px 20px;
+        	display: block;
+        	transition: 0.5s all ease;
+        }
+        #menu li a:hover{
+        	background: orange;
+        	color: white;
+        }
+        #menu li ul{
+        	list-style: none;
+        	padding: 0;
+        	position: absolute;
+        	left: -99999px;
+        	
+        }
+        #menu li ul li{
+        	float: none;
+        	border-right: none;
+        	border-left: none;
+        	border-bottom: 2px solid #605B5B;
+        	border-top: 2px solid #605B5B;
+        	width: 150px;
+        	position: relative;
+        }
+        #menu li:hover ul{
+        	left: 0;
+        }
+        #menu li ul li ul{
+        	position: absolute;
+        	top: -99999px;
+        }
+        #menu li ul li:hover ul{
+        	top: 0;
+        	left: 150px;
+        }
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="">Home</a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Services</a></li>
+		<li><a href="">Blog</a></li>
+		<li><a href="">Skill</a>
+           <ul>
+           	<li><a href="">Html</a></li>
+           		<li><a href="">Css</a></li>
+           			<li><a href="">Php</a></li>
+           				<li><a href="">WordPress</a>
+ 							<ul>
+ 								<li><a href="">Customization</a></li>
+ 								<li><a href="">Customization</a></li>
+ 								<li><a href="">Customization</a></li>
+ 							</ul>
+           				</li>
+           					<li><a href="">Graphic</a></li>
+           </ul>
+		</li>
+		<li><a href="">Contact</a></li>
+
+	</ul>
+	</body>
+</html>

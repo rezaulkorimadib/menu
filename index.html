@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Menu1</title>
+	<style>
+		ul#menu{
+			width: 980px;
+			min-height: 49px;
+			background: dodgerblue;
+			margin: 0 auto;
+			padding: 0;
+		}
+		ul#menu li{
+			list-style: none;
+			float: left;
+			background:orange;
+			border-right: 1px solid green;
+			border-left: 1px solid green;
+			margin: 0 auto;
+			position: relative;
+		}
+		ul#menu li a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			padding: 15px 30px;
+		}
+		ul#menu li a:hover{
+			background: black;
+			color: white;
+
+		}
+		ul#menu li:last-child{
+			border-right:none;
+		}
+		ul#menu li ul{
+			padding: 0;
+			position: absolute;
+			left: -99999px;
+		}
+		ul#menu li ul li{
+			border-right: none;
+			border-left: none;
+			border-top: 1px solid green;
+			border-bottom: 1px solid green;
+			float: none;
+			width: 170px;
+		}
+		ul#menu li ul li:last-child{
+			border-bottom: 1px solid green;
+
+		}
+		ul#menu li:hover ul{
+			left: 0;
+		}
+	ul#menu li ul li ul{
+		top: -99999px;
+		position: absolute;
+
+	}
+	ul#menu li ul li:hover ul{
+		top: 0;
+		left: 170px;
+	}
+	ul#menu li ul li{
+		position: relative;
+	}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Services</a>
+           <ul>
+           	<li><a href="#">WordPress</a></li>
+           	<li><a href="#">Web Design</a></li>
+           	<li><a href="#">Graphic Design</a>
+   				<ul>
+   					<li><a href="">Psd To html</a></li>
+   					<li><a href="">Picture To Html</a></li>
+                    <li><a href="">Photoshop</a></li>
+
+
+   				</ul>
+           	</li>
+           	<li><a href="#">Home</a></li>
+           </ul>
+		</li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contact</a></li>
+		<li><a href="#">Skill</a></li>
+	</ul>
+</body>
+</html>
